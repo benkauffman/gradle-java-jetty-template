@@ -1,7 +1,7 @@
 package com.krashidbuilt.api.listener;
 
 import com.krashidbuilt.api.util.DateTime;
-import com.krashidbuilt.api.server.HealthCheckResource;
+import com.krashidbuilt.api.resource.HealthCheckResource;
 import com.krashidbuilt.api.service.MySQL;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

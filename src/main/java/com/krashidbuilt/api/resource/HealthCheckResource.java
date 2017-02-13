@@ -1,4 +1,4 @@
-package com.krashidbuilt.api.server;
+package com.krashidbuilt.api.resource;
 
 import com.krashidbuilt.api.model.Error;
 import com.krashidbuilt.api.service.MySQL;
