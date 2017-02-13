@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%logger{1.}:%L] - %msg%n"/>
+        </Console>
+
+        <RollingFile name="DebugFile" fileName="logs/krashidbuilt-java-api-DEBUG.log"
+                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-DEBUG.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+
+        <RollingFile name="InfoFile" fileName="logs/krashidbuilt-java-api-INFO.log"
+                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-INFO.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+
+        <RollingFile name="WarnFile" fileName="logs/krashidbuilt-java-api-WARN.log"
+                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-WARN.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+
+        <RollingFile name="ErrorFile" fileName="logs/krashidbuilt-java-api-ERROR.log"
+                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-ERROR.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console" level="debug"/>
+            <appender-ref ref="DebugFile" level="debug"/>
+            <appender-ref ref="InfoFile" level="info"/>
+            <appender-ref ref="WarnFile" level="warn"/>
+            <appender-ref ref="ErrorFile" level="error"/>
+        </root>
+    </loggers>
+</configuration>

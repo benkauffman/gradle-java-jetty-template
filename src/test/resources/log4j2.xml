@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%logger{1.}:%L] [%t] - %msg%n"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="logs/TEST-krashidbuilt-java-api.log"
+                     filePattern="logs/TEST-krashidbuilt-java-api-%d{yyyy-MM-dd}.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] [%t] - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console" level="debug"/>
+            <appender-ref ref="RollingFile" level="debug"/>
+        </root>
+    </loggers>
+</configuration>

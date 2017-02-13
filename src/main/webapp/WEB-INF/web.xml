@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>jersey</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>
+                io.swagger.jaxrs.json,
+                io.swagger.jaxrs.listing,
+                com.krashidbuilt.api
+            </param-value>
+        </init-param>
+        <!--<init-param>-->
+        <!--<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>-->
+        <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jersey</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SwaggerConfig</servlet-name>
+        <servlet-class>io.swagger.jaxrs.config.DefaultJaxrsConfig</servlet-class>
+        <init-param>
+            <param-name>api.version</param-name>
+            <param-value>0.0.0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.title</param-name>
+            <param-value>KrashidBuilt - Tmplate API</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.basepath</param-name>
+            <param-value>/api</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Bootstrap</servlet-name>
+        <servlet-class>com.krashidbuilt.api.Bootstrap</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <listener>
+        <listener-class>com.krashidbuilt.api.listener.AppContextListener</listener-class>
+    </listener>
+
+
+    <filter>
+        <filter-name>OriginFilter</filter-name>
+        <filter-class>com.krashidbuilt.api.filter.OriginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>OriginFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowGenericHttpRequests</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowSubdomains</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, HEAD, POST, PUT, DELETE, OPTIONS</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>X-Test-1, X-Test-2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.maxAge</param-name>
+            <param-value>-1</param-value>
+        </init-param>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CacheFilter</filter-name>
+        <filter-class>com.krashidbuilt.api.filter.CacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CacheFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>PrivateFilter</filter-name>
+        <filter-class>com.krashidbuilt.api.filter.PrivateFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PrivateFilter</filter-name>
+        <url-pattern>/api/private/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>com.krashidbuilt.api.filter.AdminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/api/private/admin/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

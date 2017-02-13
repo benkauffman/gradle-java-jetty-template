@@ -1,0 +1,13 @@
+.gradle/
+.idea
+build
+logs
+/bin
+classes
+*.war
+out
+.settings
+*.properties
+*.iml
+
+!gradle-wrapper.properties
