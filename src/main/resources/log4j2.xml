@@ -5,29 +5,29 @@
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%logger{1.}:%L] - %msg%n"/>
         </Console>
 
-        <RollingFile name="DebugFile" fileName="logs/krashidbuilt-java-api-DEBUG.log"
-                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-DEBUG.log.gz"
+        <RollingFile name="DebugFile" fileName="logs/gradle-java-jetty-template-DEBUG.log"
+                     filePattern="logs/gradle-java-jetty-template-%d{yyyy-MM-dd}-DEBUG.log.gz"
                      ignoreExceptions="false">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
             <TimeBasedTriggeringPolicy/>
         </RollingFile>
 
-        <RollingFile name="InfoFile" fileName="logs/krashidbuilt-java-api-INFO.log"
-                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-INFO.log.gz"
+        <RollingFile name="InfoFile" fileName="logs/gradle-java-jetty-template-INFO.log"
+                     filePattern="logs/gradle-java-jetty-template-%d{yyyy-MM-dd}-INFO.log.gz"
                      ignoreExceptions="false">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
             <TimeBasedTriggeringPolicy/>
         </RollingFile>
 
-        <RollingFile name="WarnFile" fileName="logs/krashidbuilt-java-api-WARN.log"
-                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-WARN.log.gz"
+        <RollingFile name="WarnFile" fileName="logs/gradle-java-jetty-template-WARN.log"
+                     filePattern="logs/gradle-java-jetty-template-%d{yyyy-MM-dd}-WARN.log.gz"
                      ignoreExceptions="false">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
             <TimeBasedTriggeringPolicy/>
         </RollingFile>
 
-        <RollingFile name="ErrorFile" fileName="logs/krashidbuilt-java-api-ERROR.log"
-                     filePattern="logs/krashidbuilt-java-api-%d{yyyy-MM-dd}-ERROR.log.gz"
+        <RollingFile name="ErrorFile" fileName="logs/gradle-java-jetty-template-ERROR.log"
+                     filePattern="logs/gradle-java-jetty-template-%d{yyyy-MM-dd}-ERROR.log.gz"
                      ignoreExceptions="false">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] - %msg%n"/>
             <TimeBasedTriggeringPolicy/>

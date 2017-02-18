@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "RUNNING: deployment.sh"
+echo "RUNNING: deploy.sh"
 echo "Name: $1"
 echo "Domain: $2"
 echo "Email: $3"
@@ -52,7 +52,7 @@ docker run -d \
   -e "LETSENCRYPT_HOST=$host" \
   -e "LETSENCRYPT_EMAIL=$email" \
   --restart always \
-  -v /home/ec2-user/logs/$name:/usr/dev/ble-java-api/logs \
+  -v /home/ec2-user/logs/$name:/usr/dev/gradle-java-jetty-template/logs \
   $name
 
 set +e

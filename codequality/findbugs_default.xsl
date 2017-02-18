@@ -73,61 +73,61 @@
                 <title>FindBugs Report</title>
                 <style type="text/css">
                     .tablerow0 {
-                    background: #EEEEEE;
+                        background: #EEEEEE;
                     }
 
                     .tablerow1 {
-                    background: white;
+                        background: white;
                     }
 
                     .detailrow0 {
-                    background: #EEEEEE;
+                        background: #EEEEEE;
                     }
 
                     .detailrow1 {
-                    background: white;
+                        background: white;
                     }
 
                     .tableheader {
-                    background: #b9b9fe;
-                    font-size: larger;
+                        background: #b9b9fe;
+                        font-size: larger;
                     }
 
                     .tablerow0:hover, .tablerow1:hover {
-                    background: #aaffaa;
+                        background: #aaffaa;
                     }
 
                     .priority-1 {
-                    color: red;
-                    font-weight: bold;
+                        color: red;
+                        font-weight: bold;
                     }
                     .priority-2 {
-                    color: orange;
-                    font-weight: bold;
+                        color: orange;
+                        font-weight: bold;
                     }
                     .priority-3 {
-                    color: green;
-                    font-weight: bold;
+                        color: green;
+                        font-weight: bold;
                     }
                     .priority-4 {
-                    color: blue;
-                    font-weight: bold;
+                        color: blue;
+                        font-weight: bold;
                     }
                 </style>
                 <script type="text/javascript">
                     function toggleRow(elid) {
-                    if (document.getElementById) {
-                    element = document.getElementById(elid);
-                    if (element) {
-                    if (element.style.display == 'none') {
-                    element.style.display = 'block';
-                    //window.status = 'Toggle on!';
-                    } else {
-                    element.style.display = 'none';
-                    //window.status = 'Toggle off!';
-                    }
-                    }
-                    }
+                        if (document.getElementById) {
+                            element = document.getElementById(elid);
+                            if (element) {
+                                if (element.style.display == 'none') {
+                                    element.style.display = 'block';
+                                    //window.status = 'Toggle on!';
+                                } else {
+                                    element.style.display = 'none';
+                                    //window.status = 'Toggle off!';
+                                }
+                            }
+                        }
                     }
                 </script>
             </head>

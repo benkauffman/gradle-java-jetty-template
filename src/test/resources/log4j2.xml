@@ -5,8 +5,8 @@
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%logger{1.}:%L] [%t] - %msg%n"/>
         </Console>
 
-        <RollingFile name="RollingFile" fileName="logs/TEST-krashidbuilt-java-api.log"
-                     filePattern="logs/TEST-krashidbuilt-java-api-%d{yyyy-MM-dd}.log.gz"
+        <RollingFile name="RollingFile" fileName="logs/TEST-gradle-java-jetty-template.log"
+                     filePattern="logs/TEST-gradle-java-jetty-template-%d{yyyy-MM-dd}.log.gz"
                      ignoreExceptions="false">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] [%-5level] [%logger{36:%L] [%t] - %msg%n"/>
             <TimeBasedTriggeringPolicy/>

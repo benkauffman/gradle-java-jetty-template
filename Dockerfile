@@ -5,8 +5,8 @@ RUN echo THIS DOCKER CONTAINER IS FOR PRODUCTION USE ONLY
 # COPY java application to image
 RUN mkdir /usr/dev
 WORKDIR /usr/dev
-COPY . /usr/dev/krashidbuilt-java-api/
-WORKDIR /usr/dev/krashidbuilt-java-api/
+COPY . /usr/dev/gradle-java-jetty-template/
+WORKDIR /usr/dev/gradle-java-jetty-template/
 
 RUN pwd
 
@@ -23,10 +23,10 @@ EXPOSE 8080
 ####################################################################################################
 ####################################################################################################
 # BUILD THE DOCKER IMAGE
-# docker build --no-cache=true -t krashidbuilt-java-api .
+# docker build --no-cache=true -t gradle-java-jetty-template .
 #
 # RUN THE IMAGE IN A CONTAINER
-# docker run -it --rm -p 8888:8080 krashidbuilt-java-api
+# docker run -it --rm -p 8888:8080 gradle-java-jetty-template
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################

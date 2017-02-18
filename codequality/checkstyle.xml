@@ -44,22 +44,22 @@
         <!-- Checks for Javadoc comments.                     -->
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
         <!--<module name="JavadocMethod">-->
-            <!--<property name="scope" value="package"/>-->
-            <!--<property name="allowMissingParamTags" value="true"/>-->
-            <!--<property name="allowMissingThrowsTags" value="true"/>-->
-            <!--<property name="allowMissingReturnTag" value="true"/>-->
-            <!--<property name="allowThrowsTagsForSubclasses" value="true"/>-->
-            <!--<property name="allowUndeclaredRTE" value="true"/>-->
-            <!--<property name="allowMissingPropertyJavadoc" value="true"/>-->
+        <!--<property name="scope" value="package"/>-->
+        <!--<property name="allowMissingParamTags" value="true"/>-->
+        <!--<property name="allowMissingThrowsTags" value="true"/>-->
+        <!--<property name="allowMissingReturnTag" value="true"/>-->
+        <!--<property name="allowThrowsTagsForSubclasses" value="true"/>-->
+        <!--<property name="allowUndeclaredRTE" value="true"/>-->
+        <!--<property name="allowMissingPropertyJavadoc" value="true"/>-->
         <!--</module>-->
         <!--<module name="JavadocType">-->
-            <!--<property name="scope" value="package"/>-->
+        <!--<property name="scope" value="package"/>-->
         <!--</module>-->
         <!--<module name="JavadocVariable">-->
-            <!--<property name="scope" value="package"/>-->
+        <!--<property name="scope" value="package"/>-->
         <!--</module>-->
         <!--<module name="JavadocStyle">-->
-            <!--<property name="checkEmptyJavadoc" value="true"/>-->
+        <!--<property name="checkEmptyJavadoc" value="true"/>-->
         <!--</module>-->
 
         <!-- Checks for Naming Conventions.                  -->
@@ -91,7 +91,9 @@
             <property name="ignorePattern" value="\$File.*\$"/>
             <property name="severity" value="info"/>
         </module>
-        <module name="MethodLength"/>
+        <module name="MethodLength">
+            <property name="max" value="150"/>
+        </module>
         <module name="ParameterNumber"/>
 
 
@@ -104,10 +106,10 @@
         <module name="NoWhitespaceBefore"/>
 
         <!--<module name="OperatorWrap">-->
-            <!--<property name="tokens"-->
-                      <!--value="ASSIGN,DIV_ASSIGN,PLUS_ASSIGN,MINUS_ASSIGN,STAR_ASSIGN,MOD_ASSIGN-->
-               <!--,SR_ASSIGN,BSR_ASSIGN,SL_ASSIGN,BXOR_ASSIGN,BOR_ASSIGN,BAND_ASSIGN"/>-->
-            <!--<property name="option" value="eol"/>-->
+        <!--<property name="tokens"-->
+        <!--value="ASSIGN,DIV_ASSIGN,PLUS_ASSIGN,MINUS_ASSIGN,STAR_ASSIGN,MOD_ASSIGN-->
+        <!--,SR_ASSIGN,BSR_ASSIGN,SL_ASSIGN,BXOR_ASSIGN,BOR_ASSIGN,BAND_ASSIGN"/>-->
+        <!--<property name="option" value="eol"/>-->
         <!--</module>-->
 
         <module name="ParenPad"/>
@@ -145,7 +147,7 @@
         <module name="IllegalInstantiation"/>
         <module name="InnerAssignment"/>
         <!--<module name="MagicNumber">-->
-            <!--<property name="severity" value="warning"/>-->
+        <!--<property name="severity" value="warning"/>-->
         <!--</module>-->
         <module name="MissingSwitchDefault"/>
         <!-- Problem with finding exception types... -->
